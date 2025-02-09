@@ -23,26 +23,53 @@
     <section id="community">
         <h2>Community Profiles</h2>
         <p>Explore communities in need of clean energy solutions and learn how you can help.</p>
+        <form id="community-form">
+            <label for="name">Community Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="location">Location:</label>
+            <input type="text" id="location" required>
+            
+            <label for="needs">Energy Needs:</label>
+            <textarea id="needs" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="community-list"></div>
     </section>
     
     <section id="providers">
         <h2>Clean Energy Provider Directory</h2>
-        <p>Find clean energy providers, NGOs, and businesses offering affordable solutions.</p>
+        <input type="text" id="search" placeholder="Search for providers...">
+        <ul id="provider-list">
+            <li>GRID Alternatives - Solar Installations</li>
+            <li>All In Energy - Energy Efficiency Programs</li>
+            <li>Other Providers...</li>
+        </ul>
     </section>
     
     <section id="crowdfunding">
         <h2>Crowdfunding for Clean Energy Projects</h2>
         <p>Support community-driven energy projects by donating or sharing campaigns.</p>
+        <a href="https://www.gofundme.com" target="_blank">Start a Fundraiser</a>
     </section>
     
     <section id="resources">
         <h2>Educational Content & Resources</h2>
-        <p>Learn how to implement, maintain, and benefit from clean energy solutions.</p>
+        <details>
+            <summary>How to install solar panels?</summary>
+            <p>Step-by-step guide to installing low-cost solar panels.</p>
+        </details>
+        <details>
+            <summary>How to reduce energy waste?</summary>
+            <p>Tips and best practices for reducing energy consumption.</p>
+        </details>
     </section>
     
     <section id="mentorship">
         <h2>Peer-to-Peer Support & Mentorship</h2>
         <p>Connect with experts and community members for guidance and shared experiences.</p>
+        <p>Forum coming soon!</p>
     </section>
     
     <footer>
@@ -52,4 +79,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
