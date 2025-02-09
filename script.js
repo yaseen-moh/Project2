@@ -1,14 +1,29 @@
+script.js:
+
 document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll("section");
-    
-    sections.forEach(section => {
-        section.addEventListener("mouseenter", function() {
-            this.style.backgroundColor = "#e0f7fa";
-            this.style.transition = "background-color 0.3s ease";
-        });
+    document.getElementById("community-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const location = document.getElementById("location").value;
+        const needs = document.getElementById("needs").value;
         
-        section.addEventListener("mouseleave", function() {
-            this.style.backgroundColor = "white";
+        const communityList = document.getElementById("community-list");
+        const entry = document.createElement("p");
+        entry.textContent = `${name} (${location}): ${needs}`;
+        communityList.appendChild(entry);
+        
+        this.reset();
+    });
+    
+    document.getElementById("search").addEventListener("keyup", function() {
+        const filter = this.value.toLowerCase();
+        const providers = document.querySelectorAll("#provider-list li");
+        providers.forEach(provider => {
+            if (provider.textContent.toLowerCase().includes(filter)) {
+                provider.style.display = "block";
+            } else {
+                provider.style.display = "none";
+            }
         });
     });
 });
